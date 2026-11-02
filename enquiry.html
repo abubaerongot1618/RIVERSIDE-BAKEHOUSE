@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Catering, Venue and Custom Order Enquiries  | Riverside Bakehouse☕ </title>
+   <meta name="description" content="Ask about catering, venue hire or made-to-order cakes and bakes in Johannesburg. We reply with availability and cost.">
+   <meta name="keywords" content="catering Johannesburg, venue hire, custom cakes, made to order bakery, enquiry">
+   <meta name="author" content="Riverside Bakehouse">
+   <meta property="og:title" content="Catering, Venue and Custom Order Enquiries | Riverside Bakehouse">
+   <meta property="og:description" content="Catering, venue hire and made-to-order bakes in Johannesburg.">
+   <meta property="og:type" content="website">
+   <meta property="og:image" content="images/hero-bakery-1200w.jpg">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+ <script src ="js/enquiry.js" defer></script>
+</head>
+<body>
+   
+
+
+     <!---Navigation menu-->
+ <header>   
+<nav>
+   <a href="index.html">Home</a>
+   <a href="about.html">About Us</a>
+   <a href="products.html">Products</a>
+   <a href="contact.html">Contact Us</a>
+   <a href="enquiry.html">Enquiry</a>
+   <a href="order.html">Order</a>
+</nav>
+</header>
+
+<!-- makes an enquiry and enters contact details-->
+<main>
+<section class="enquiry form">
+<h1>Make an enquiry</h1>
+<p> Have questions about catering, venue, or made to order </p>
+
+<form action="#" method="post" id="enquiry-form"  novalidate>
+<label for="name">Full Name</label>
+<input type="text" id="name" name="name" required>
+<span id="name-error" class="error-message" aria-live="polite"></span>
+
+
+<label for="email">Email Address</label>
+<input type="email" id="email" name="email" required>
+<span id="email-error" class="error-message" aria-live="polite"></span>
+
+<label for="phone">Phone Number</label>
+<input type="tel" id="phone" name="phone" required>
+<span id="phone-error" class="error-message" aria-live="polite"></span>
+
+
+<label for="enquiry-type">Type of Enquiry</label>
+<select id="enquiry-type" name="enquiry-type">
+    <option value="catering">Catering</option>
+     <option value="Venue">Venue</option>
+      <option value="made to order">Made to Order</option>
+</select>
+<span id="enquiry-type-error" class="error-message" aria-live="polite"></span>
+
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="5" required></textarea>
+<span id="message-error" class="error-message" aria-live="polite"></span>
+
+
+
+
+<button type="submit">Send Enquiry</button>
+</form>
+<div id="enquiry-response" class="enquiry-response" aria-live="polite"></div>
+</section>
+</main>
+
+
+
+<!--Footer appears at the bottom of every page-->
+ <footer>
+    <p>&copy; 2026 Riverside Bakehouse☕</p>
+</footer>   
+
+
+</body>
+</html>

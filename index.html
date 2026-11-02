@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riverside Bakehouse| Fresh Bread and Pastries in Johannesburg</title>
+    <meta name="description" content="Neighbourhood bakery in Johannesburg baking fresh bread, croissants, pastries and coffee daily since 2015. View our menu and order online.">
+    <meta name="keywords" content="bakery Johannesburg, fresh bread, croissants, pastries, coffee, Riverside Bakehouse">
+    <meta name="author" content="Riverside Bakehouse">
+    <meta property="og:title" content="Riverside Bakehouse | Fresh Bread and Pastries in Johannesburg">
+    <meta property="og:description" content="Fresh bread, croissants and pastries baked daily in Johannesburg.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero-bakery-1200w.jpg">
+
+    <!-- Google Fonts: Playfair Display for headings, Lato for body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <!-- Single external stylesheet, shared by all pages on the site -->
+    <link rel="stylesheet" href="style.css">
+    <script src="js/gallery.js" defer></script>
+</head>
+<body>
+
+    <!-- ============================================================
+         NAVIGATION MENU
+         Appears identically at the top of every page on the site.
+         Uses Flexbox (see style.css) to lay links out horizontally
+         on desktop, and stacks them vertically on mobile.
+    ============================================================ -->
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="order.html">Order</a>
+        </nav>
+    </header>
+
+    <!-- ============================================================
+         HERO SECTION
+         Full-width welcome banner with background image and
+         call-to-action button linking to the Products page.
+
+         Uses srcset/sizes so the browser automatically downloads
+         the smallest suitable image file for the user's screen
+         width, improving load speed on mobile devices.
+    ============================================================ -->
+    <div class="hero">
+        <img
+            src="images/hero-bakery-800w.jpg"
+            srcset="images/hero-bakery-480w.jpg 480w,
+                    images/hero-bakery-800w.jpg 800w,
+                    images/hero-bakery-1200w.jpg 1200w"
+            sizes="100vw"
+            alt="Fresh Bread and pastries at Riverside Bakehouse">
+
+        <div class="hero-text">
+            <h1>Welcome to Riverside Bakehouse☕</h1>
+            <p>Freshly baked bread and pastries made with pure love and kindness</p>
+            <!-- Call-to-action button: sends visitors straight to the menu -->
+            <a href="products.html" class="cta-btn">View Our Menu</a>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         FEATURED PRODUCTS SECTION
+         A short preview grid of four popular items, each with an
+         image, name, and short description. Full menu with prices
+         lives on products.html.
+
+         .product.category uses CSS Grid to lay these out in 4
+         columns on desktop, dropping to 2 then 1 column on smaller
+         screens (see media queries in style.css).
+    ============================================================ -->
+    <main>
+        <h2>Our Products</h2>
+        <p>Freshly baked bread, pastries and more made with love and pure kindness</p>
+
+        <section class="product category">
+
+            <!-- Product: Baguette -->
+            <div class="product-item">
+                <h3>Baguette</h3>
+                <p>This baguette unites all and brings us together</p>
+                <img
+                    src="images/baguette-600w.jpg"
+                    srcset="images/baguette-300w.jpg 300w,
+                            images/baguette-600w.jpg 600w,
+                            images/baguette-900w.jpg 900w"
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 25vw"
+                    alt="Baguette">
+            </div>
+
+            <!-- Product: Croissants -->
+            <div class="product-item">
+                <h3>Croissants</h3>
+                <p>Golden, Flaky and made fresh each day.</p>
+                <img
+                    src="images/croissants-600w.jpg"
+                    srcset="images/croissants-300w.jpg 300w,
+                            images/croissants-600w.jpg 600w,
+                            images/croissants-900w.jpg 900w"
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 25vw"
+                    alt="Croissants">
+            </div>
+
+            <!-- Product: Espresso -->
+            <div class="product-item">
+                <h3>Espresso</h3>
+                <p>Has a unique golden foam layer on top from ordinary coffee</p>
+                <img
+                    src="images/espresso-600w.jpg"
+                    srcset="images/espresso-300w.jpg 300w,
+                            images/espresso-600w.jpg 600w,
+                            images/espresso-900w.jpg 900w"
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 25vw"
+                    alt="Espresso">
+            </div>
+
+            <!-- Product: Milkshakes -->
+            <div class="product-item">
+                <h3>Milkshakes</h3>
+                <p>Connects us to happy memories of old-fashioned diners and warm summer days</p>
+                <img
+                    src="images/milkshakes-600w.jpg"
+                    srcset="images/milkshakes-300w.jpg 300w,
+                            images/milkshakes-600w.jpg 600w,
+                            images/milkshakes-900w.jpg 900w"
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 25vw"
+                    alt="Milkshake">
+            </div>
+
+        </section>
+
+<section class="gallery">
+    <h2>Gallery</h2>
+    <p>A peek at what's fresh out of our ovens. Click a photo to view it larger.</p>
+
+    <div class="gallery-grid">
+        <button type="button" class="gallery-item" data-full="images/croissants-900w.jpg">
+            <img src="images/croissants-300w.jpg" alt="Golden flaky croissants fresh from the oven">
+        </button>
+        <button type="button" class="gallery-item" data-full="images/baguette-900w.jpg">
+            <img src="images/baguette-300w.jpg" alt="Crusty baguettes on a bakery counter">
+        </button>
+        <button type="button" class="gallery-item" data-full="images/espresso-900w.jpg">
+            <img src="images/espresso-300w.jpg" alt="Espresso with golden crema in a cup">
+        </button>
+        <button type="button" class="gallery-item" data-full="images/milkshakes-900w.jpg">
+            <img src="images/milkshakes-300w.jpg" alt="Milkshakes served in tall glasses">
+        </button>
+        <button type="button" class="gallery-item" data-full="images/baker1-900w.jpg">
+            <img src="images/baker1-300w.jpg" alt="Morgan, our head baker, in the bakery">
+        </button>
+    </div>
+</section>
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+         Appears identically at the bottom of every page.
+    ============================================================ -->
+    <footer>
+        <p>&copy; 2026 Riverside Bakehouse☕</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us | Riverside Bakehouse Story and Team</title>
+      <meta name="description" content="Meet the bakers behind Riverside Bakehouse, a Johannesburg bakery known for traditional, home-style South African baking.">
+      <meta name="keywords" content="about Riverside Bakehouse, head baker, South African baking, local bakery, Johannesburg">
+      <meta name="author" content="Riverside Bakehouse">
+      <meta property="og:title" content="About Us | Riverside Bakehouse Story and Team">
+      <meta property="og:description" content="Meet the team behind Johannesburg's friendly neighbourhood bakery.">
+      <meta property="og:type" content="website">
+      <meta property="og:image" content="images/hero-bakery-1200w.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/accordion.js" defer></script>
+</head>
+<body>
+
+    <!-- ============================================================
+         NAVIGATION MENU (identical on every page)
+    ============================================================ -->
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact us</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="order.html">Order</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ============================================================
+             OUR STORY
+             Short bakery history/background section.
+        ============================================================ -->
+        <section class="about-history">
+            <h1>Our Story</h1>
+            <p>Riverside Bakehouse has been your friendly neighbourhood bakery store available since 2015 baking fresh bread and pastries for the community</p>
+        </section>
+
+        <!-- ============================================================
+             MISSION & VISION
+        ============================================================ -->
+        <section class="mission-vision">
+            <h2>Our Mission</h2>
+            <p>To bring the warm, home-style baking to our community using traditional, recipes, and quality local ingredients</p>
+
+            <h2>Our Vision</h2>
+            <p>To become the go-to bakery for authentic South African baked goods, known both locally and beyond for quality, consistency, and heart</p>
+
+            <!-- ================================================
+                 TEAM MEMBERS
+                 Single team photo (head baker) with a list of all
+                 staff names/roles alongside it.
+
+                 Uses srcset so a smaller image loads on mobile
+                 screens, since the photo doesn't need to be full
+                 resolution on a small viewport.
+            ====================================================-->
+            <section class="team">
+                <h2>Meet The Team</h2>
+                <div class="team member">
+                    <img
+                        src="images/baker1-600w.jpg"
+                        srcset="images/baker1-300w.jpg 300w,
+                                images/baker1-600w.jpg 600w,
+                                images/baker1-900w.jpg 900w"
+                        sizes="(max-width: 480px) 100vw, (max-width: 768px) 60vw, 300px"
+                        alt="Head baker">
+                    <p><strong>Morgan</strong>-Head Baker</p>
+                    <p><strong>Naledi Dlamini</strong>-Pastry Chef</p>
+                    <p><strong>Thabo Mokoena</strong>- Assistant Baker</p>
+                    <p><strong>Aaron Jackson</strong>- Counter staff</p>
+                    <p><strong>Michael Kyle</strong>- Cashier</p>
+                    <p><strong>Jimmy Smith</strong>- Delivery Driver</p>
+                    <p><strong>Abuba Erongot</strong>- Owner</p>
+                </div>
+            </section>
+
+        </section>
+
+<section class="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="accordion">
+        <h3>
+            <button type="button" class="accordion-btn" aria-expanded="false" aria-controls="faq-1">
+            Do you take custom cake orders?
+            </button>
+        </h3>
+        <div id="faq-1" class="accordion-panel" hidden>
+            <p>Yes. Use our enquiry form and choose "Made to Order". We will confirm availability and a price.</p>
+        </div>
+
+        <h3>
+            <button type="button" class="accordion-btn" aria-expanded="false" aria-controls="faq-2">
+              Do you cater for events?
+            </button>
+        </h3>
+        <div id="faq-2" class="accordion-panel" hidden>
+            <p>We do. Tell us the date and number of guests in an enquiry and we will send a quote.</p>
+        </div>
+
+        <h3>
+            <button type="button" class="accordion-btn" aria-expanded="false" aria-controls="faq-3">
+                What are your opening hours?
+            </button>
+        </h3>
+        <div id="faq-3" class="accordion-panel" hidden>
+            <p>Monday to Saturday 7:00AM to 6:00PM, Sundays 8:00AM to 3:00PM. We are closed on public holidays.</p>
+        </div>
+
+        <h3>
+            <button type="button" class="accordion-btn" aria-expanded="false" aria-controls="faq-4">
+                Where can I find you?
+            </button>
+        </h3>
+        <div id="faq-4" class="accordion-panel" hidden>
+            <p>We are at 10 St Patrick Road, Johannesburg. See the map on our <a href="contact.html">contact page</a>.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    </main>
+
+    <!-- Footer appears at the bottom of every page -->
+    <footer>
+        <p>&copy; 2026 Riverside Bakehouse☕</p>
+    </footer>
+
+</body>
+</html>

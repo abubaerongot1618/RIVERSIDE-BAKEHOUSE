@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu | Riverside Bakehouse Johannesburg</title>
+    <meta name="description" content="Search our full menu of breakfast bakes, lunch, coffee, tea and cold drinks. Filter by category and sort by price.">
+    <meta name="keywords" content="bakery menu Johannesburg, croissants, sandwiches, pies, muffins, coffee, tea">
+    <meta name="author" content="Riverside Bakehouse">
+    <meta property="og:title" content="Our Menu | Riverside Bakehouse Johannesburg">
+    <meta property="og:description" content="Breakfast bakes, lunch, coffee, tea and cold drinks. Search and filter our full menu.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero-bakery-1200w.jpg">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/products-data.js" defer></script>
+    <script src="js/products.js" defer></script>
+    
+</head>
+<body>
+
+    <!-- =======================================================
+         NAVIGATION MENU (identical on every page)
+    ============================================================ -->
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="order.html">Order</a>
+        </nav>
+    </header>
+
+    
+
+    <!-- ============================================================
+         FULL MENU
+         Built with native HTML <details>/<summary> elements for the
+         expand/collapse arrow (no CSS/JS required). Each item within
+         a category is shown as a small card: photo, name, and price
+         together, using .menu-item-card / .menu-item-img /
+         .menu-item-info (see style.css).
+
+         Items below with their own photo
+         now use a dedicated item-*.jpg image instead.
+    ============================================================ -->
+   <main>
+    <h1>Our Menu</h1>
+    <p>Search our full menu, filter by category, or sort by name and price.</p>
+
+    <div class="menu-tools">
+        <label for="menu-search">Search the menu</label>
+        <input type="search" id="menu-search" placeholder="e.g. croissant, coffee, pie">
+
+        <label for="menu-sort">Sort by</label>
+        <select id="menu-sort">
+            <option value="default">Menu order</option>
+            <option value="name-asc">Name (A to Z)</option>
+            <option value="price-asc">Price (low to high)</option>
+            <option value="price-desc">Price (high to low)</option>
+        </select>
+
+        <div id="menu-filters" class="filter-bar" role="group" aria-label="Filter by category"></div>
+
+        <button type="button" id="menu-clear" class="clear-btn">Clear search and filters</button>
+        <p id="menu-count" class="menu-count" aria-live="polite"></p>
+    </div>
+
+    <div id="menu-grid" class="menu-item-list menu-grid"></div>
+</main>
+
+    <!-- Footer appears at the bottom of every page -->
+    <footer>
+        <p>&copy; 2026 Riverside Bakehouse☕</p>
+    </footer>
+
+</body>
+</html>

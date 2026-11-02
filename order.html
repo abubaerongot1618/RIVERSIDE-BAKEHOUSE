@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online |  Riverside Bakehouse☕</title>
+   <meta name="description" content="Order fresh bread, pastries and drinks from Riverside Bakehouse in Johannesburg. Choose pickup or delivery.">
+   <meta name="keywords" content="order bread online, bakery order, pastries, pickup, delivery, Johannesburg">
+   <meta name="author" content="Riverside Bakehouse">
+   <meta property="og:title" content="Order Online | Riverside Bakehouse">
+   <meta property="og:description" content="Order fresh bread, pastries and drinks for pickup or delivery in Johannesburg.">
+   <meta property="og:type" content="website">
+   <meta property="og:image" content="images/hero-bakery-1200w.jpg">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/order.js" defer></script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="enquiry.html">Enquiry</a>
+        <a href="order.html">Order</a>
+    </nav>
+</header>
+
+<main>
+    <h1>Order Online</h1>
+    <p>Select your items below and submit — we'll contact you to confirm.</p>
+
+    <form action="#" method="post" id="order-form" novalidate>
+
+        
+   --------1. Your details-------------
+          
+        <fieldset>
+            <legend>Your Details</legend>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            <span id="name-error" class="error-message" aria-live="polite"></span>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+               <span id="email-error" class="error-message" aria-live="polite"></span>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+            <span id="phone-error" class="error-message" aria-live="polite"></span>
+
+        </fieldset>
+
+        <!-- =============================================
+             2. BREAKFAST
+        ============================================== -->
+        <fieldset>
+            <legend>Breakfast · Croissants</legend>
+            <p class="hint">Enter quantity (0 = none)</p>
+
+            <div class="order-row">
+                <label for="q-plain-croissant">Plain Croissant</label>
+                <span class="price">R25.00</span>
+                <input type="number" id="q-plain-croissant" name="plain_croissant" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-almond-croissant">Almond Croissant</label>
+                <span class="price">R30.00</span>
+                <input type="number" id="q-almond-croissant" name="almond_croissant" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-caprese-croissant">Caprese Croissant</label>
+                <span class="price">R32.00</span>
+                <input type="number" id="q-caprese-croissant" name="caprese_croissant" min="0" value="0">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Breakfast · Savoury Bakes</legend>
+            <div class="order-row">
+                <label for="q-corned-beef">Corned Beef Hash Bake</label>
+                <span class="price">R38.00</span>
+                <input type="number" id="q-corned-beef" name="corned_beef_hash" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-full-english">Full English Bake</label>
+                <span class="price">R42.00</span>
+                <input type="number" id="q-full-english" name="full_english" min="0" value="0">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Breakfast · Bread &amp; Rolls</legend>
+            <div class="order-row">
+                <label for="q-morning-rolls">Soft Morning Rolls</label>
+                <span class="price">R15.00</span>
+                <input type="number" id="q-morning-rolls" name="morning_rolls" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-croissant-loaf">Butter Croissant Loaf</label>
+                <span class="price">R18.00</span>
+                <input type="number" id="q-croissant-loaf" name="croissant_loaf" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-milk-bread">Japanese Milk Bread Rolls</label>
+                <span class="price">R22.00</span>
+                <input type="number" id="q-milk-bread" name="milk_bread" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-hawaiian">Hawaiian Rolls</label>
+                <span class="price">R20.00</span>
+                <input type="number" id="q-hawaiian" name="hawaiian_rolls" min="0" value="0">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Breakfast · Muffins &amp; Cakes</legend>
+            <div class="order-row">
+                <label for="q-blueberry-muffin">Blueberry Muffins</label>
+                <span class="price">R24.00</span>
+                <input type="number" id="q-blueberry-muffin" name="blueberry_muffin" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-choc-muffin">Double Chocolate Muffins</label>
+                <span class="price">R30.00</span>
+                <input type="number" id="q-choc-muffin" name="chocolate_muffin" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-cranberry-muffin">Cranberry Muffins</label>
+                <span class="price">R30.00</span>
+                <input type="number" id="q-cranberry-muffin" name="cranberry_muffin" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-vanilla-cake">Vanilla Sponge Cake</label>
+                <span class="price">R45.00</span>
+                <input type="number" id="q-vanilla-cake" name="vanilla_cake" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-red-velvet">Red Velvet Cake</label>
+                <span class="price">R50.00</span>
+                <input type="number" id="q-red-velvet" name="red_velvet" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-carrot-cake">Carrot Cake</label>
+                <span class="price">R48.00</span>
+                <input type="number" id="q-carrot-cake" name="carrot_cake" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-tiramisu">Tiramisu Cake</label>
+                <span class="price">R55.00</span>
+                <input type="number" id="q-tiramisu" name="tiramisu" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-jalapeno">Jalapeño &amp; Cornbread Muffins</label>
+                <span class="price">R28.00</span>
+                <input type="number" id="q-jalapeno" name="jalapeno_cornbread" min="0" value="0">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Breakfast · Cupcakes</legend>
+            <div class="order-row">
+                <label for="q-vanilla-cupcake">Vanilla Buttercream Cupcakes</label>
+                <span class="price">R20.00</span>
+                <input type="number" id="q-vanilla-cupcake" name="vanilla_cupcake" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-red-velvet-cupcake">Red Velvet Cupcakes</label>
+                <span class="price">R22.00</span>
+                <input type="number" id="q-red-velvet-cupcake" name="red_velvet_cupcake" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-cookies-cream-cupcake">Cookies &amp; Cream Cupcakes</label>
+                <span class="price">R22.00</span>
+                <input type="number" id="q-cookies-cream-cupcake" name="cookies_cream_cupcake" min="0" value="0">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Breakfast · Scones &amp; Biscuits</legend>
+            <div class="order-row">
+                <label for="q-plain-scone">Plain Scones</label>
+                <span class="price">R20.00</span>
+                <input type="number" id="q-plain-scone" name="plain_scone" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-fruit-scone">Fruit Scones</label>
+                <span class="price">R23.00</span>
+                <input type="number" id="q-fruit-scone" name="fruit_scone" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-buttermilk-biscuit">Buttermilk Biscuits</label>
+                <span class="price">R18.00</span>
+                <input type="number" id="q-buttermilk-biscuit" name="buttermilk_biscuit" min="0" value="0">
+            </div>
+        </fieldset>
+
+        <!-- =============================================
+             3. LUNCH
+        ============================================== -->
+        <fieldset>
+            <legend>Lunch · Baguette Sandwiches</legend>
+            <div class="order-row">
+                <label for="q-ham-cheese">Ham &amp; Cheese</label>
+                <span class="price">R35.00</span>
+                <input type="number" id="q-ham-cheese" name="ham_cheese" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-chicken-mayo">Chicken Mayo</label>
+                <span class="price">R40.00</span>
+                <input type="number" id="q-chicken-mayo" name="chicken_mayo" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-roast-beef">Roast Beef</label>
+                <span class="price">R45.00</span>
+                <input type="number" id="q-roast-beef" name="roast_beef" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-italian">Italian</label>
+                <span class="price">R42.00</span>
+                <input type="number" id="q-italian" name="italian" min="0" value="0">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Lunch · Ciabatta Sandwiches</legend>
+            <div class="order-row">
+                <label for="q-pesto">Pesto Ciabatta</label>
+                <span class="price">R37.00</span>
+                <input type="number" id="q-pesto" name="pesto_ciabatta" min="0" value="0">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Lunch · Panini</legend>
+            <div class="order-row">
+                <label for="q-panini">Panini</label>
+                <span class="price">R12.00</span>
+                <input type="number" id="q-panini" name="panini" min="0" value="0">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Lunch · Pies</legend>
+            <div class="order-row">
+                <label for="q-chicken-pie">Chicken Pie</label>
+                <span class="price">R22.00</span>
+                <input type="number" id="q-chicken-pie" name="chicken_pie" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-beef-veg-pie">Beef &amp; Veg Pie</label>
+                <span class="price">R22.00</span>
+                <input type="number" id="q-beef-veg-pie" name="beef_veg_pie" min="0" value="0">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Lunch · Filled Rolls</legend>
+            <div class="order-row">
+                <label for="q-vetkoek">Vetkoeks</label>
+                <span class="price">R10.00</span>
+                <input type="number" id="q-vetkoek" name="vetkoek" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-roti">Roti Roll (Chicken)</label>
+                <span class="price">R25.00</span>
+                <input type="number" id="q-roti" name="chicken_roti" min="0" value="0">
+            </div>
+        </fieldset>
+
+        <!-- =============================================
+             4. BEVERAGES
+        ============================================== -->
+        <fieldset>
+            <legend>Hot Beverages · Coffee</legend>
+            <div class="order-row">
+                <label for="q-espresso">Espresso</label>
+                <span class="price">R18.00</span>
+                <input type="number" id="q-espresso" name="espresso" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-americano">Americano</label>
+                <span class="price">R22.00</span>
+                <input type="number" id="q-americano" name="americano" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-latte">Latte</label>
+                <span class="price">R28.00</span>
+                <input type="number" id="q-latte" name="latte" min="0" value="0">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Hot Beverages · Tea</legend>
+            <div class="order-row">
+                <label for="q-earl-grey">Earl Grey</label>
+                <span class="price">R19.00</span>
+                <input type="number" id="q-earl-grey" name="earl_grey" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-english-breakfast">English Breakfast Tea</label>
+                <span class="price">R20.00</span>
+                <input type="number" id="q-english-breakfast" name="english_breakfast" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-jasmine">Jasmine Green</label>
+                <span class="price">R20.00</span>
+                <input type="number" id="q-jasmine" name="jasmine_green" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-masala">Masala Chai</label>
+                <span class="price">R23.00</span>
+                <input type="number" id="q-masala" name="masala_chai" min="0" value="0">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Cold Beverages · Iced Coffee</legend>
+            <div class="order-row">
+                <label for="q-iced-americano">Iced Americano</label>
+                <span class="price">R23.00</span>
+                <input type="number" id="q-iced-americano" name="iced_americano" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-iced-latte">Iced Latte</label>
+                <span class="price">R25.00</span>
+                <input type="number" id="q-iced-latte" name="iced_latte" min="0" value="0">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Cold Beverages · Iced Teas</legend>
+            <div class="order-row">
+                <label for="q-iced-rooibos">Iced Rooibos</label>
+                <span class="price">R18.00</span>
+                <input type="number" id="q-iced-rooibos" name="iced_rooibos" min="0" value="0">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Extras</legend>
+            <div class="order-row">
+                <label for="q-soft-bread">Soft Bread (White/Brown)</label>
+                <span class="price">R18.00</span>
+                <input type="number" id="q-soft-bread" name="soft_bread" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-milkshake">Milkshake</label>
+                <span class="price">R32.00</span>
+                <input type="number" id="q-milkshake" name="milkshake" min="0" value="0">
+            </div>
+            <div class="order-row">
+                <label for="q-sparkling">Sparkling Water</label>
+                <span class="price">R11.00</span>
+                <input type="number" id="q-sparkling" name="sparkling_water" min="0" value="0">
+            </div>
+        </fieldset>
+
+        <!-- =============================================
+             5. DELIVERY OR PICKUP
+        ============================================== -->
+        <fieldset>
+            <legend>Delivery or Pickup</legend>
+
+            <label for="fulfillment">Choose an Option</label>
+            <select id="fulfillment" name="fulfillment">
+                <option value="pickup">Store Pickup</option>
+                <option value="delivery">Delivery</option>
+            </select>
+
+            <label for="pickup-date">Preferred Date</label>
+            <input type="date" id="pickup-date" name="pickup-date" required>
+            <span id="pickup-date-error" class="error-message" aria-live="polite"></span>
+
+            <label for="address">Delivery Address (if delivery)</label>
+            <textarea id="address" name="address" rows="3" placeholder="Street, suburb, city, postal code"></textarea>
+            <span id="address-error" class="error-message" aria-live="polite"></span>
+        </fieldset>
+
+        <!-- =============================================
+             6. PAYMENT METHOD
+        ============================================== -->
+        <fieldset class="payment-fieldset">
+            <legend>Payment Method</legend>
+
+            <div class="payment-grid">
+
+                <!-- CARD -->
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="card" required>
+                    <span class="payment-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" width="46" height="30" rx="4" fill="#1a3d7c"/>
+                            <rect x="1" y="8" width="46" height="6" fill="#0d2145"/>
+                            <rect x="6" y="20" width="10" height="5" rx="1" fill="#f2c94c"/>
+                            <rect x="20" y="20" width="14" height="3" rx="1" fill="#ffffff" opacity="0.7"/>
+                            <rect x="38" y="20" width="6" height="5" rx="1" fill="#ffffff" opacity="0.85"/>
+                        </svg>
+                    </span>
+                    <span class="payment-text">
+                        <strong>Debit / Credit Card</strong>
+                        <small>Visa · Mastercard · Amex</small>
+                    </span>
+                </label>
+
+                <!-- EFT -->
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="eft">
+                    <span class="payment-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" width="46" height="30" rx="4" fill="#2e7d5b"/>
+                            <path d="M8 22 L20 10 L32 22 Z" fill="#ffffff" opacity="0.9"/>
+                            <rect x="10" y="23" width="28" height="3" rx="1" fill="#ffffff" opacity="0.7"/>
+                        </svg>
+                    </span>
+                    <span class="payment-text">
+                        <strong>EFT / Bank Transfer</strong>
+                        <small>Direct deposit</small>
+                    </span>
+                </label>
+
+                <!-- CASH -->
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="cash">
+                    <span class="payment-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" width="46" height="30" rx="4" fill="#4a7c3a"/>
+                            <circle cx="24" cy="16" r="8" fill="#f2e8c9"/>
+                            <text x="24" y="20" text-anchor="middle" font-size="10"
+                                  font-family="Arial" font-weight="bold" fill="#4a7c3a">R</text>
+                        </svg>
+                    </span>
+                    <span class="payment-text">
+                        <strong>Cash</strong>
+                        <small>On pickup / delivery</small>
+                    </span>
+                </label>
+
+            </div>
+     <span id="payment-error" class="error-message" aria-live="polite"></span>
+
+            <!--  CARD DETAILS -->
+            <div class="payment-details details-card">
+                <h2>Card Payment</h2>
+            <p class="payment-note"> For your security we do not card details online. You will pay by our card machine when you collect or receive your order.</p>
+
+
+                <label for="card-name">Name on Card</label>
+                <input type="text" id="card-name" name="card_name" placeholder="e.g. J. Smith">
+
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" name="card_number"
+                       placeholder="1234 5678 9012 3456" maxlength="19">
+
+                <div class="card-row">
+                    <div>
+                        <label for="card-expiry">Expiry</label>
+                        <input type="text" id="card-expiry" name="card_expiry"
+                               placeholder="MM/YY" maxlength="5">
+                    </div>
+                    <div>
+                        <label for="card-cvv">CVV</label>
+                        <input type="text" id="card-cvv" name="card_cvv"
+                               placeholder="123" maxlength="4">
+                    </div>
+                </div>
+            </div>
+
+            <!--  EFT DETAILS  -->
+            <div class="payment-details details-eft">
+                <h2>Bank Transfer Details</h2>
+
+                <p style="font-size:0.9rem; color:#5e4530; margin:0 0 0.7rem;">
+                    <p class="payment-note">
+                            Please use the reference below when making your transfer.<br>
+                    <strong>Bank:</strong> Riverside Bank<br>
+                    <strong>Account:</strong> 123 456 7890<br>
+                    <strong>Branch Code:</strong> 4700110>
+                    <strong>Account Name:</strong> Riverside Bakehouse>
+                </p>
+
+                <label for="eft-ref">Your Payment Reference</label>
+                <input type="text" id="eft-ref" name="eft_reference"
+                       placeholder="e.g. SMITH-2026-04">
+
+                <label for="eft-account">Account Holder Name</label>
+                <input type="text" id="eft-account" name="eft_account"
+                       placeholder="Name on the bank account">
+            </div>
+
+            <!-- CASH DETAILS -->
+            <div class="payment-details details-cash">
+                <h2>Cash Payment</h2>
+
+                <p style="font-size:0.9rem; color:#5e4530; margin:0 0 0.7rem;">
+                    You'll pay in person when you collect or receive your order.
+                    Please have the exact amount ready where possible.
+                </p>
+
+                <label for="cash-name">Name of Person Paying</label>
+                <input type="text" id="cash-name" name="cash_name"
+                       placeholder="Who will hand over the cash?">
+
+                <label for="cash-note">Any notes for our team?</label>
+                <input type="text" id="cash-note" name="cash_note"
+                       placeholder="e.g. I'll be there at 10am">
+            </div>
+        </fieldset>
+
+        <!-- =============================================
+             7. ADDITIONAL NOTES
+        ============================================== -->
+        <fieldset>
+            <legend>Additional Notes</legend>
+            <textarea id="notes" name="notes" rows="4"
+                      placeholder="Allergies, special requests, etc."></textarea>
+        </fieldset>
+
+        <!-- =============================================
+             8. SELECTION SUMMARY
+        ============================================== -->
+       <div>
+       <p class="summary-empty" id="summary-empty">No items selected yet. Enter quantities above.</p>
+
+       <div id="summary-lines"></div>
+
+            <p class="summary-note">
+                Final total will be confirmed by our team via email once your order is received.
+            </p>
+        </div>
+
+        <!-- Empty-order warning -->
+        <p class="empty-warning">⚠ Please select at least one item before submitting.</p>
+
+        <button type="submit">Submit Order</button>
+    </form>
+    <div id="order-confirmation" class="enquiry-response" aria-live="polite"></div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Riverside Bakehouse☕</p>
+</footer>
+
+</body>
+</html>

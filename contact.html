@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-Info | Riverside Bakehouse</title> <meta name="description" content="Find our address, opening hours, phone numbers and map, or send us a message. We would love to hear from you.">
+<meta name="keywords" content="bakery contact, opening hours, St Patrick Road Johannesburg, Riverside Bakehouse">
+<meta name="author" content="Riverside Bakehouse">
+<meta property="og:title" content="Contact and Opening Hours | Riverside Bakehouse">
+<meta property="og:description" content="Address, opening hours, phone numbers and map for Riverside Bakehouse in Johannesburg.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/hero-bakery-1200w.jpg">  
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+        {
+      "@Context": "https://schema.org",
+       "@type": "Bakery",
+      "name": "Riverside Bakehouse",
+      "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 St Patrick Road",
+      "addressLocality": "Johannesburg",
+      "addressCountry": "ZA"
+  },
+      "telephone": "+27632198701",
+      "email": "info@riversidebakehouse.co.za",
+      "openingHours": ["Mon-Sat 07:00-18:00", "Sun 08:00-15:00"]
+   }
+     </script> 
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="js/map.js" defer></script>
+    <script src="js/contact.js" defer></script>
+</head>
+<body>
+
+    <!-- ============================================================
+         NAVIGATION MENU (identical on every page)
+    ============================================================ -->
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="order.html">Order</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contact us</h1>
+        <p>We would love to hear from you please keep in touch.</p>
+
+        <!-- ============================================================
+             CONTACT DETAILS
+             Static business info: address, opening hours, phone/email.
+        ============================================================ -->
+        <section class="contact-details">
+            <h2>Visit us</h2>
+            <p>10 St Patrick Road, Johannesburg, South Africa</p>
+
+            <!-- Business Operating Hours -->
+            <h2>Opening Hours</h2>
+            <p>Mondays-Saturdays: 7:00AM - 6:00PM</p>
+            <p>Sundays: 8:00AM - 3:00PM</p>
+            <p>Public Holidays: Closed</p>
+
+            <h2>Get In Touch</h2>
+            <p>Phone📞: 0632198701</p>
+            <p>Phone📞: 0630971316</p>
+            <p>Email📧: info@riversidebakehouse.co.za</p>
+        </section>
+
+        <!-- ============================================================
+             CONTACT FORM
+             Sends a short message to the bakery. Each input has a
+             unique id (matched to its label's "for" attribute) so
+             screen readers and clicking the label both work
+             correctly.
+
+             NOTE: the Full name and Surname fields previously both
+             used id="name"/name="name" — duplicate IDs are invalid
+             HTML and broke the label-to-field association for
+             Surname. Fixed below with unique ids/names.
+        ============================================================ -->
+             <section class="contact-map">
+            <h2>Find Us</h2>
+            <div id="map" role="region" aria-label="Map showing the location of Riverside Bakehouse"></div>
+        </section>
+
+        <section class="contact form">
+            <h3>Send a message</h3>
+            <form action="#" method="post" id="contact-form" novalidate>
+
+            
+                <label for="firstname">First name</label>
+                <input type="text" id="firstname" name="firstname" required>
+                <span id="firstname-error" class="error-message" aria-live="polite"></span>
+
+
+                <label for="surname">Surname</label>
+                <input type="text" id="surname" name="surname" required>
+                <span id="surname-error" class="error-message" aria-live="polite"></span>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                <span id="email-error" class="error-message" aria-live="polite"></span>
+
+
+      <select id="message-type" name="message-type" required>
+                <option value="">Choose a type</option>
+                <option value="general">General question</option>
+                <option value="feedback">Feedback</option>
+                <option value="compliment">Compliment</option>
+                <option value="complaint">Complaint</option>
+                
+               </select>
+
+                <label for="message">Message</label>    
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <span id="message-error" class="error-message" aria-live="polite"></span>
+              
+
+                <button type="submit">Send message</button>
+
+            </form>
+            <div id="contact-status" class="enquiry-response" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <!-- Footer appears at the bottom of every page -->
+    <footer>
+        <p>&copy; 2026 Riverside Bakehouse☕</p>
+    </footer>
+
+</body>
+</html>
